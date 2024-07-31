@@ -26,14 +26,15 @@ const App = () => {
 
   const addNewContact = (newContact) => {
     setContacts((prevContacts) => {
+      // console.log(newContact);
       return [...prevContacts, newContact]
     })
   }
 
   const handleDelete = (id) => {
-    setContacts((prevContacts) =>
-      prevContacts.filter((contact) => contact.id !== id)
-    )
+    setContacts((prevContacts) => {
+      return prevContacts.filter((contact) => contact.id !== id)
+    })
   }
 
   const filterContacts = contacts.filter((contact) => contact.name.toLowerCase().includes(inputValue.toLowerCase())

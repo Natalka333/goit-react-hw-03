@@ -18,6 +18,7 @@ const initialValues = {
 
 const ContactForm = ({ addNewContact }) => {
 
+
     const handleSubmit = (values, actions) => {
         console.log(values);
         addNewContact({
@@ -40,7 +41,7 @@ const ContactForm = ({ addNewContact }) => {
                 <ErrorMessage className={css.error} name="username" component="div" />
 
                 <label className={css.label} >Number</label>
-                <Field className={css.field} type="text" name="number" />
+                <Field className={css.field} type="tel" name="number" />
                 <ErrorMessage className={css.error} name="number" component="div" />
 
                 <button className={css.button} type="submit">Add contact</button>
