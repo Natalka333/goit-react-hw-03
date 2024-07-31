@@ -27,7 +27,7 @@ const App = () => {
   const addNewContact = (newContact) => {
     setContacts((prevContacts) => {
       // console.log(newContact);
-      return [...prevContacts, newContact]
+      return [newContact, ...prevContacts]
     })
   }
 
@@ -44,7 +44,9 @@ const App = () => {
   return (
     <div>
       <h1>Phonebook</h1>
+
       <ContactForm addNewContact={addNewContact} />
+
       <SearchBox
         inputValue={inputValue}
         setInputValue={setInputValue}

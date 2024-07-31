@@ -18,7 +18,6 @@ const initialValues = {
 
 const ContactForm = ({ addNewContact }) => {
 
-
     const handleSubmit = (values, actions) => {
         console.log(values);
         addNewContact({
